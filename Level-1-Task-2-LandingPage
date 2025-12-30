@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Tech | Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">NEXTGEN</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Innovative Tech Solutions</h1>
+            <p>Creating smart digital products for the next generation of problem solvers.</p>
+            <a href="#features" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h3>Cloud Ready</h3>
+            <p>Access your projects from anywhere in the world.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Secure Data</h3>
+            <p>Advanced encryption for your technical ideas.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Kanishka M M | CodSoft Task 2 Submission</p>
+    </footer>
+</body>
+</html>
