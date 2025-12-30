@@ -2,56 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanishka M M | Portfolio</title>
+    <style>
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { line-height: 1.6; color: #333; background-color: #f4f4f4; scroll-behavior: smooth; }
+        
+        /* Header & Navigation */
+        header { background: #1a1a1a; color: #fff; padding: 1rem 10%; position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+
+        /* Hero Section */
+        .hero { background: #2c3e50; color: white; padding: 100px 10%; display: flex; align-items: center; justify-content: space-between; }
+        .hero-text h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero-text p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px; }
+
+        /* About Section */
+        .about { padding: 80px 10%; background: #fff; display: flex; gap: 50px; align-items: center; flex-wrap: wrap; }
+        .about-img { width: 280px; height: 350px; background: #ddd; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .about-img img { width: 100%; height: 100%; object-fit: cover; }
+        .about-content { flex: 1; min-width: 300px; }
+
+        /* Skills Section */
+        .skills { padding: 60px 10%; background: #f9f9f9; text-align: center; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 30px; }
+        .skill-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-weight: bold; color: #2c3e50; }
+
+        /* Projects Section */
+        .projects { padding: 80px 10%; background: #fff; text-align: center; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .project-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 12px 20px rgba(0,0,0,0.1); }
+        .project-info { padding: 25px; text-align: left; }
+        
+        /* Buttons */
+        .btn { background: #3498db; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold; border: none; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #2980b9; }
+        .resume-btn { background: #27ae60; margin-top: 20px; }
+        .resume-btn:hover { background: #219150; }
+
+        /* Contact Section - WHERE YOU EDIT YOUR INFO */
+        .contact { padding: 80px 10%; background: #2c3e50; color: white; text-align: center; }
+        .contact h2 { margin-bottom: 20px; }
+        .contact p { margin-bottom: 10px; font-size: 1.1rem; }
+        .contact a { color: #3498db; text-decoration: none; font-weight: bold; }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: #888; text-align: center; padding: 25px; font-size: 0.9rem; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero { text-align: center; padding: 60px 5%; }
+            .about { padding: 40px 5%; text-align: center; justify-content: center; }
+            .about-img { margin-bottom: 20px; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Kanishka</h1>
-    <p class="subtitle">Web Development Intern</p>
-</header>
+    <header>
+        <nav>
+            <div class="logo" style="font-size: 1.5rem; font-weight: bold; letter-spacing: 2px;">KANISHKA</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="about">
-    <img src="profile.jpg" alt="My Photo">
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>KANISHKA M M</h1>
+            <p>B.Tech Student | Passionate Developer | Problem Solver</p>
+            <a href="#contact" class="btn">Hire Me</a>
+        </div>
+    </section>
 
-    <div class="about-text">
-        <h2>About Me</h2>
-        <p>
-            I am a B.Tech student learning web development using HTML and CSS.
-            I am committed to improving my skills and building clean,
-            user-friendly websites.
-        </p>
-    </div>
-</section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="profile.jpg" alt="Kanishka M M">
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>I am a B.Tech student with a passion for technology and problem-solving. I enjoy creating projects, learning new skills, and exploring innovative ways to turn ideas into real solutions.</p>
+            <a href="resume.pdf" class="btn resume-btn" download>Download Resume</a>
+        </div>
+    </section>
 
-<section>
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript (Basic)</li>
-    </ul>
-</section>
+    <section class="skills" id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5 & CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">C / C++ / Python</div>
+            <div class="skill-card">Web Development</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">GitHub/Git</div>
+        </div>
+    </section>
 
-<section>
-    <h2>Projects</h2>
-    <ul>
-        <li>Portfolio Website</li>
-        <li>Landing Page</li>
-        <li>Calculator App</li>
-    </ul>
-</section>
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-info">
+                    <span style="color: #3498db; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Web Dev</span>
+                    <h3 style="margin: 10px 0;">Personal Portfolio</h3>
+                    <p style="color: #666; margin-bottom: 15px;">A professional portfolio website showcasing my skills and projects, built for the CodSoft Internship task.</p>
+                    <a href="#" style="color: #3498db; text-decoration: none; font-weight: bold;">View Details &rarr;</a>
+                </div>
+            </div>
+            </div>
+    </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>Phone: 1234567890</p>
-</section>
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations or opportunities!</p>
+        
+        <p>Email: <a href="kanishkamuthusamy17gmail.com">your.email@gmail.com</a></p>
+        
+        <p>Phone: <a href="tel:+919487914484">+91 9487914484</a></p>
+        
+        <p>Location: Coimbatore, Tamil Nadu, India</p>
+    </section>
 
-<footer>
-    <p>© 2025 Kanishka</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Kanishka M M | Created for CodSoft Internship</p>
+    </footer>
 
 </body>
 </html>
